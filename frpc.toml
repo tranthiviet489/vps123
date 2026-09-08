@@ -1,0 +1,17 @@
+cat << 'EOF' > .frpc.toml
+serverAddr = "us.afrp.net"
+serverPort = 7000
+auth.method = "token"
+auth.token = "afrp.net"
+
+transport.heartbeatInterval = 10
+transport.heartbeatTimeout = 90
+transport.tcpMux = true
+
+[[proxies]]
+name = "ssh_tcp_22_test_afrp"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 45860
+EOF
