@@ -1,4 +1,4 @@
-cat << 'EOF' > frpc.toml
+cat << 'EOF' > .frpc.toml
 serverAddr = "us.afrp.net"
 serverPort = 7000
 auth.method = "token"
